@@ -1,0 +1,96 @@
+main.cpp
+
+Create Game variable
+Game.Init
+Loop{
+end = Game.Update
+Game.Draw
+}
+Game.Cleanup
+
+
+
+
+
+Game.cpp
+
+::Init
+SDL
+IMG
+Window
+Renderer
+Surface & Textures
+Background Music
+keys[] array
+Player.Init
+Enemies[].Init
+Scene.Init
+
+::Release
+SDL_Quit
+SDL_DestroyTexture
+IMG_Quit
+Mix_Quit
+
+::Input
+PollEvent
+update keys[]
+
+::Update
+Call Input
+Movement Logic
+Call Player.Move
+Song update?
+
+::Draw
+Auxiliar rectangle
+RenderClear
+Draw Scene
+Draw Player
+Draw Enemies
+Update Screen
+Delay
+
+
+
+
+
+Entity.cpp
+
+::Entity
+is_alive = false
+
+::~Entity
+
+::Init
+posX
+posY
+width
+height
+speed
+is_alive
+
+::GetRect
+x
+y
+width
+height
+
+::GetX
+return x
+
+::GetWidth
+return width
+
+::SetX
+x = valor que es passa
+
+::ShutDown
+is_alive = false
+
+::IsAlvie
+return is_alive
+
+::Move
+x += dx * speed
+y += dy * speed
